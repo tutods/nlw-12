@@ -1,5 +1,7 @@
-# Created by https://www.toptal.com/developers/gitignore/api/webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs
-# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs
+# Created by https://www.toptal.com/developers/gitignore/api/webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs,expo
+# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs,expo
+
+#!! ERROR: expo is undefined. Use list command to see defined gitignore types !!#
 
 ### JetBrains ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -740,9 +742,23 @@ $RECYCLE.BIN/
 # and uncomment the following lines
 # .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs
-
+# End of https://www.toptal.com/developers/gitignore/api/webstorm,webstorm+iml,webstorm+all,jetbrains,jetbrains+iml,jetbrains+all,linux,macos,windows,sublimetext,visualstudiocode,node,yarn,storybook,react,nextjs,expo
 
 dev.db
 **/dev.db-journal
 dev.db-journal
+
+# Expo
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
