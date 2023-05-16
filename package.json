@@ -1,0 +1,28 @@
+{
+  "name": "nlw-spacetime",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "react-native",
+    "next.js"
+  ],
+  "description": "",
+  "private": true,
+  "author": {
+    "name": "Daniel Sousa @TutoDS",
+    "url": "https://github.com/tutods"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "husky": "^8.0.3",
+    "wsrun": "^5.2.4"
+  }
+}
