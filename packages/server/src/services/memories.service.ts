@@ -1,6 +1,5 @@
-import { FastifyReply, FastifyRequest, RouteHandlerMethod } from 'fastify'
+import { FastifyReply, FastifyRequest } from 'fastify'
 import { prisma } from '@/lib/prisma'
-import { z } from 'zod'
 import { paramsSchema } from '@/schemas/params.schema'
 import { createMemorySchema } from '@/schemas/memory.schema'
 
