@@ -7,10 +7,10 @@ export default function Home() {
     <main className="grid min-h-screen grid-cols-2">
       <section className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-[url(/assets/bg-stars.svg)] bg-cover px-28 py-16">
         {/* Blur */}
-        <div className="blur-full absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50" />
+        <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" />
 
         {/* Stripes */}
-        <div className="bg-stripes absolute inset-y-0 right-2 w-2" />
+        <div className="absolute inset-y-0 right-2 w-2 bg-stripes" />
 
         {/* Sign In */}
         <Link
@@ -49,7 +49,7 @@ export default function Home() {
 
           <Link
             passHref
-            className="font-alt inline-block rounded-full bg-green-500 px-5 py-3 text-sm uppercase leading-none text-black transition-colors hover:bg-green-600"
+            className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black transition-colors hover:bg-green-600"
             href="#"
           >
             Cadastrar lembrança

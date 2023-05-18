@@ -11,10 +11,10 @@ const tsconfigPaths = Object.keys(tsconfigFile.compilerOptions.paths)
 
 module.exports = {
   root: true,
-  extends: ['next/core-web-vitals', 'prettier'],
+  extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   rules: {
-    'prettier/prettier': ['error'],
+    'prettier/prettier': ['error', { usePrettierrc: true }],
   },
   overrides: [
     {
@@ -108,7 +108,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.js?(x)'],
+      files: ['**/*.(c,m)?js?(x)'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
       },
