@@ -8,5 +8,6 @@ export async function baseRoutes(app: FastifyInstance) {
   })
 }
 
+// Export other routes files
 export * from '@/routes/memories'
 export * from '@/routes/users'
