@@ -1,16 +1,16 @@
-import { User } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { User } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="grid min-h-screen grid-cols-2">
       <section className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-[url(/assets/bg-stars.svg)] bg-cover px-28 py-16">
         {/* Blur */}
-        <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" />
+        <div className="blur-full absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50" />
 
         {/* Stripes */}
-        <div className="absolute inset-y-0 right-2 w-2 bg-stripes" />
+        <div className="bg-stripes absolute inset-y-0 right-2 w-2" />
 
         {/* Sign In */}
         <Link
@@ -49,7 +49,7 @@ export default function Home() {
 
           <Link
             passHref
-            className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black transition-colors hover:bg-green-600"
+            className="font-alt inline-block rounded-full bg-green-500 px-5 py-3 text-sm uppercase leading-none text-black transition-colors hover:bg-green-600"
             href="#"
           >
             Cadastrar lembrança
@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="text-sm leading-relaxed text-gray-200">
-          Feito com 💜 no NLW da{" "}
+          Feito com 💜 no NLW da{' '}
           <a
             className="underline transition-colors hover:text-gray-100"
             href="https://rocketseat.com.br"
@@ -73,7 +73,7 @@ export default function Home() {
       <section className="flex flex-col bg-[url(/assets/bg-stars.svg)] bg-cover p-16">
         <div className="flex flex-1 items-center justify-center">
           <p className="w-full max-w-[360px] text-center leading-relaxed">
-            Você ainda não registrou nenhuma lembrança, come a{" "}
+            Você ainda não registrou nenhuma lembrança, come a{' '}
             <Link
               passHref
               className="underline transition-colors duration-150 ease-in-out hover:text-gray-50"

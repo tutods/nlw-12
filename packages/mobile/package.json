@@ -7,7 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint --ignore-path ../../.gitignore",
+    "lint": "eslint --ignore-path ../../.gitignore --fix .",
     "format": "prettier --config ../../prettier.config.cjs --write ."
   },
   "dependencies": {

@@ -2,11 +2,11 @@ const fs = require('fs');
 const tsconfigFile = require('./tsconfig.json');
 
 const folders = fs
-  .readdirSync('src', { withFileTypes: true })
+  .readdirSync('./', { withFileTypes: true })
   .filter(dirent => dirent.isDirectory())
-  .map(dirent => !['styles'].includes(dirent.name) && dirent.name);
+  .map(dirent => dirent.name);
 
-const tsconfigPaths = Object.keys(tsconfigFile.compilerOptions.paths)
+const tsconfigPaths = Object.keys(tsconfigFile.compilerOptions.paths ?? {})
   .map(path => path.split('/')[0]);
 
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         'no-restricted-imports': 'off',
         '@typescript-eslint/no-restricted-imports': [
-          'error',
+          'warn',
           {
             patterns: ['../*', './*'],
           },
@@ -108,7 +108,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.js?(x)'],
+      files: ['**/*.(c,m)?js?(x)'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
       },
