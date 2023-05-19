@@ -1,7 +1,7 @@
 import { User } from 'lucide-react';
 import Link from 'next/link';
 
-export const LoginButton = () => {
+export const SignIn = () => {
   const githubLoginLink = [
     'https://github.com/login/oauth/authorize?client_id=',
     process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID,

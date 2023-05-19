@@ -6,7 +6,6 @@ import axios from 'axios';
 export const registerUser = async (
   request: FastifyRequest,
   reply: FastifyReply,
-  app: FastifyInstance,
 ) => {
   const { code } = registerUserSchema.parse(request.body);
 
@@ -51,7 +50,7 @@ export const registerUser = async (
       });
     }
 
-    const token = app.jwt.sign(
+    const token = request.server.jwt.sign(
       {
         name: user.name,
         avatarUrl: user.avatarUrl,

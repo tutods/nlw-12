@@ -3,9 +3,10 @@ import {
   Bai_Jamjuree as BaiJamjuree,
   Roboto_Flex as Roboto,
 } from 'next/font/google';
+import { cookies } from 'next/headers';
 import { ReactNode } from 'react';
 
-import { Footer, HeroSection, LoginButton } from '@/components/layout';
+import { Footer, HeroSection, Profile, SignIn } from '@/components/layout';
 
 import '@/app/globals.css';
 
@@ -30,6 +31,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const isAuthenticated = cookies().has('token');
+
   return (
     <html lang="pt">
       <body
@@ -46,7 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Stripes */}
           <div className="absolute inset-y-0 right-2 w-2 bg-stripes" />
 
-          <LoginButton />
+          {isAuthenticated ? <Profile /> : <SignIn />}
           <HeroSection />
           <Footer />
         </section>
