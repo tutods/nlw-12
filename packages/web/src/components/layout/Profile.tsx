@@ -21,7 +21,7 @@ export const Profile = () => {
         <Link
           passHref
           className="block text-sm text-red-400 transition-colors hover:text-red-300"
-          href="#"
+          href="/api/auth/logout"
         >
           Quero sair
         </Link>
