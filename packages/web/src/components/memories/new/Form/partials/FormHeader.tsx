@@ -4,7 +4,7 @@ import { MediaPicker } from '@/components/form/MediaPicker';
 
 type Props = {};
 
-export const MemoryFormHeader = ({}: Props) => {
+export const NewMemoryFormHeader = ({}: Props) => {
   return (
     <>
       <section className="flex items-center gap-4">
@@ -32,7 +32,7 @@ export const MemoryFormHeader = ({}: Props) => {
           Tornar memória pública
         </label>
       </section>
-      <MediaPicker />
+      <MediaPicker id="media" name="coverUrl" />
     </>
   );
 };

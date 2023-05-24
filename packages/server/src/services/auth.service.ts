@@ -57,7 +57,7 @@ export const registerUser = async (
       },
       {
         sub: user.id,
-        expiresIn: '2h',
+        expiresIn: '1d',
       },
     );
 
