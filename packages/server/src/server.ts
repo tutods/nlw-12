@@ -1,8 +1,17 @@
 import 'dotenv/config';
 import fastify from 'fastify';
 import cors from '@fastify/cors';
-import { baseRoutes, memoriesRoutes, usersRoutes, authRoutes } from '@/routes';
+import { join } from 'node:path';
+import {
+  baseRoutes,
+  memoriesRoutes,
+  usersRoutes,
+  authRoutes,
+  uploadRoutes,
+} from '@/routes';
 import jwt from '@fastify/jwt';
+import multipart from '@fastify/multipart';
+import staticFiles from '@fastify/static';
 
 const app = fastify();
 
@@ -15,10 +24,19 @@ app
   .register(jwt, {
     secret: process.env.JWT_SECRET ?? 'nlw-spacetime',
   })
+  // Static Files
+  .register(staticFiles, {
+    root: join(__dirname, '../public'),
+    prefix: '/',
+  })
+  // Multipart
+  .register(multipart)
   // initial GET route
   .register(baseRoutes)
   // Auth routes
   .register(authRoutes)
+  // Upload routes
+  .register(uploadRoutes)
   // Users routes
   .register(usersRoutes, { prefix: '/users' })
   // Memories routes
