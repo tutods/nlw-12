@@ -7,7 +7,7 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 
 const pump = promisify(pipeline);
 
-const mimeTypeRegex = /^(image|video\/[a-zA-Z]+/;
+const mimeTypeRegex = /^(image|video)\/[a-zA-Z]+/;
 
 export const uploadFile = async (
   request: FastifyRequest,

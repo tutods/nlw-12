@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center">
+    <main className="flex flex-1 items-center justify-center">
       <p className="w-full max-w-[360px] text-center leading-relaxed">
         Você ainda não registrou nenhuma lembrança, come a{' '}
         <Link
@@ -14,6 +14,6 @@ export default function Home() {
         </Link>
         !
       </p>
-    </div>
+    </main>
   );
 }

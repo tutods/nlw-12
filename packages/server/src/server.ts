@@ -24,7 +24,7 @@ app
   .register(jwt, {
     secret: process.env.JWT_SECRET ?? 'nlw-spacetime',
   })
-  // Static Files
+  // Serve Static Files
   .register(staticFiles, {
     root: join(__dirname, '../public'),
     prefix: '/',
