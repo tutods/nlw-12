@@ -19,7 +19,6 @@ export const Profile = () => {
       <p className="max-w-[140px] leading-snug text-gray-50">
         {name}{' '}
         <Link
-          passHref
           className="block text-sm text-red-400 transition-colors hover:text-red-300"
           href="/api/auth/logout"
         >

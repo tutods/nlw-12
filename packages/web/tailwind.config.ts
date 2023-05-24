@@ -1,4 +1,5 @@
-import { Config } from 'tailwindcss'
+import tailwindForms from '@tailwindcss/forms';
+import { Config } from 'tailwindcss';
 
 export default {
   content: [
@@ -94,5 +95,5 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config
+  plugins: [tailwindForms()],
+} satisfies Config;

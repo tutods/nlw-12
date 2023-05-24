@@ -10,7 +10,8 @@ export async function GET(request: NextRequest) {
     data: { token },
   } = await api.post('/register', { code });
 
-  const redirectURL = new URL('/', request.url);
+  const redirectTo = request.cookies.get('redirectTo')?.value;
+  const redirectURL = redirectTo ?? new URL('/', request.url);
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30; // 30 days
 
   return NextResponse.redirect(redirectURL, {

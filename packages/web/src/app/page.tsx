@@ -8,7 +8,7 @@ export default function Home() {
         <Link
           passHref
           className="underline transition-colors duration-150 ease-in-out hover:text-gray-50"
-          href="#"
+          href="/memories/new"
         >
           criar agora
         </Link>

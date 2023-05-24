@@ -23,7 +23,7 @@ export const HeroSection = () => (
     <Link
       passHref
       className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black transition-colors hover:bg-green-600"
-      href="#"
+      href="/memories/new"
     >
       Cadastrar lembrança
     </Link>
