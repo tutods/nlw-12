@@ -1,17 +1,19 @@
-import 'dotenv/config';
-import fastify from 'fastify';
 import cors from '@fastify/cors';
-import { join } from 'node:path';
-import {
-  baseRoutes,
-  memoriesRoutes,
-  usersRoutes,
-  authRoutes,
-  uploadRoutes,
-} from '@/routes';
 import jwt from '@fastify/jwt';
 import multipart from '@fastify/multipart';
 import staticFiles from '@fastify/static';
+import fastify from 'fastify';
+import { join } from 'node:path';
+
+import {
+  authRoutes,
+  baseRoutes,
+  memoriesRoutes,
+  uploadRoutes,
+  usersRoutes,
+} from '@/routes';
+
+import 'dotenv/config';
 
 const app = fastify();
 

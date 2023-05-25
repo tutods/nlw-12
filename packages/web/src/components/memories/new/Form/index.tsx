@@ -7,9 +7,7 @@ import { FormEvent } from 'react';
 import { NewMemoryFormHeader } from '@/components/memories/new/Form/partials/FormHeader';
 import { api } from '@/lib/api';
 
-type Props = {};
-
-export const NewMemoryForm = ({}: Props) => {
+export const NewMemoryForm = () => {
   const router = useRouter();
 
   const handleCreateMemory = async (evt: FormEvent<HTMLFormElement>) => {

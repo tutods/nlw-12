@@ -2,9 +2,7 @@ import { Camera } from 'lucide-react';
 
 import { MediaPicker } from '@/components/form/MediaPicker';
 
-type Props = {};
-
-export const NewMemoryFormHeader = ({}: Props) => {
+export const NewMemoryFormHeader = () => {
   return (
     <>
       <section className="flex items-center gap-4">

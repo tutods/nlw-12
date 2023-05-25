@@ -1,7 +1,8 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
+
 import { prisma } from '@/lib/prisma';
-import { paramsSchema } from '@/schemas/params.schema';
 import { createMemorySchema } from '@/schemas/memory.schema';
+import { paramsSchema } from '@/schemas/params.schema';
 
 export const getMemories = async (
   request: FastifyRequest,

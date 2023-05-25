@@ -1,9 +1,9 @@
+import { FastifyReply, FastifyRequest } from 'fastify';
 import { randomUUID } from 'node:crypto';
-import { extname, resolve } from 'node:path';
 import { createWriteStream } from 'node:fs';
+import { extname, resolve } from 'node:path';
 import { pipeline } from 'node:stream';
 import { promisify } from 'node:util';
-import { FastifyReply, FastifyRequest } from 'fastify';
 
 const pump = promisify(pipeline);
 

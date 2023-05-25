@@ -11,5 +11,5 @@ export async function baseRoutes(app: FastifyInstance) {
 // Export other routes files
 export * from '@/routes/auth.routes';
 export * from '@/routes/memories.routes';
-export * from '@/routes/users.routes';
 export * from '@/routes/upload.routes';
+export * from '@/routes/users.routes';

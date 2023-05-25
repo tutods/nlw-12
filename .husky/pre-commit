@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+rootDir=$(pwd)
+
+for package in $(ls packages);
+do
+    echo "~~~~ $package ~~~~"
+    cd "$rootDir/packages/$package"
+    npx lint-staged
+done

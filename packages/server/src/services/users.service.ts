@@ -1,4 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
+
 import { prisma } from '@/lib/prisma';
 
 export const getUsers = async (

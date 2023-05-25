@@ -1,7 +1,8 @@
-import { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
+import axios from 'axios';
+import { FastifyReply, FastifyRequest } from 'fastify';
+
 import { prisma } from '@/lib/prisma';
 import { registerUserSchema, userSchema } from '@/schemas/auth.schema';
-import axios from 'axios';
 
 export const registerUser = async (
   request: FastifyRequest,
