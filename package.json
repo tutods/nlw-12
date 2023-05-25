@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "prepare": "husky install",
+    "dev": "wsrun --parallel dev",
     "format": "wsrun --parallel format",
     "lint": "wsrun --parallel lint"
   },
