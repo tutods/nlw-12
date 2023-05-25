@@ -3,11 +3,12 @@ const tsconfigFile = require('./tsconfig.json');
 
 const folders = fs
   .readdirSync('src', { withFileTypes: true })
-  .filter(dirent => dirent.isDirectory())
-  .map(dirent => !['styles'].includes(dirent.name) && dirent.name);
+  .filter((dirent) => dirent.isDirectory())
+  .map((dirent) => !['styles'].includes(dirent.name) && dirent.name);
 
-const tsconfigPaths = Object.keys(tsconfigFile.compilerOptions.paths)
-  .map(path => path.split('/')[0]);
+const tsconfigPaths = Object.keys(tsconfigFile.compilerOptions.paths).map(
+  (path) => path.split('/')[0],
+);
 
 module.exports = {
   root: true,
@@ -55,9 +56,7 @@ module.exports = {
           {
             groups: [
               // Packages
-              [
-                '^@?\\w',
-              ],
+              ['^@?\\w'],
               // Folders
               [
                 `^(${tsconfigPaths.join('|')})(/.*|$)`,
