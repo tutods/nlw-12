@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           'grid min-h-screen grid-cols-2 bg-gray-900 font-sans text-gray-100',
         ])}
       >
-        <section className="relative flex h-screen flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-[url(/assets/bg-stars.svg)] bg-cover px-28 py-16">
+        <section className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-[url(/assets/bg-stars.svg)] bg-cover px-28 py-16">
           {/* Blur */}
           <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" />
 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </section>
 
-        <section className="flex h-screen flex-col overflow-y-auto bg-[url(/assets/bg-stars.svg)] bg-cover">
+        <section className="flex max-h-screen flex-col overflow-y-auto bg-[url(/assets/bg-stars.svg)] bg-cover">
           {children}
         </section>
       </body>

@@ -11,10 +11,25 @@ export async function GET(request: NextRequest) {
   } = await api.post('/register', { code });
 
   const redirectTo = request.cookies.get('redirectTo')?.value;
-  const redirectURL = redirectTo ?? new URL('/', request.url);
   const cookieExpiresInSeconds = 60 * 60 * 24 * 30; // 30 days
 
-  return NextResponse.redirect(redirectURL, {
+  if (redirectTo) {
+    const res = new Response();
+    res.headers.append(
+      'Set-Cookie',
+      `token=${token}; Path=/; max-age=${cookieExpiresInSeconds};`,
+    );
+    res.headers.append(
+      'Set-Cookie',
+      `redirectTo=; Path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;`,
+    );
+
+    return NextResponse.redirect(redirectTo, {
+      headers: res.headers,
+    });
+  }
+
+  return NextResponse.redirect(new URL('/', request.url), {
     headers: {
       'Set-Cookie': `token=${token}; Path=/; max-age=${cookieExpiresInSeconds};`,
     },
