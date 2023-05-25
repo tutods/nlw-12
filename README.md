@@ -14,6 +14,9 @@ This repo contains the code of **NLW 12** from **Rocketseat**.
 
 These are the changes I have made during the **NLW 12**:
 
+- [x] Render image or video for `coverUrl`;
+- [x] Customize scrollbar;
+- [x] Create memory details page;
 - [x] Preview for video and images;
 - [x] Split routes code into services;
 - [x] Create a separated folder for store all the validation schemas using **Zod**;
