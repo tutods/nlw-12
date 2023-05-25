@@ -1,4 +1,4 @@
-![Cover](img/cover.png)
+<!-- ![Cover](.github/assets/cover.png) -->
 
 ![NLW Spacetime](./packages/web/public/assets/nlw-spacetime.svg)
 
