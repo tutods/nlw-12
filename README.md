@@ -22,6 +22,13 @@ These are the changes I have made during the **NLW 12**:
 - [x] Create a separated folder for store all the validation schemas using **Zod**;
 - [x] Use monorepo and setup `pnpm-workspace.yaml` file;
 
+### Improvements
+
+- [ ] Share public memory;
+- [ ] Edit memory;
+- [ ] Optimize images on upload;
+- [ ] Responsive layout;
+
 ## 🔗 More About Me
 
 [
